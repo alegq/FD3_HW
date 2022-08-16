@@ -16,7 +16,7 @@
   render: function() {
 
     var answersCode=this.props.answers.map( v =>
-      React.createElement(VotesAnswer, {key:v.code, text:v.text, count:v.count} )
+      React.createElement(VotesAnswer, {key:v.code, text:v.text, count:v.count, url: v.url, price: v.price} )
     );
     return React.DOM.div( {className:'VotesBlock'}, 
       React.createElement(VotesQuestion, {question:this.props.question} ),
