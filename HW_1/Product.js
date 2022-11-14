@@ -1,6 +1,6 @@
-﻿var VotesAnswer = React.createClass({
+﻿var Product = React.createClass({
 
-  displayName: 'VotesAnswer',
+  displayName: 'Product',
 
   propTypes: {
     count: React.PropTypes.number.isRequired,
@@ -9,7 +9,7 @@
 
   render: function() {
 
-    return React.DOM.div( {className:'VotesBlockAnswer'},
+    return React.DOM.div( {className:'Product'},
       React.DOM.span({className:'Count'},'наличие:'+this.props.count),
       React.DOM.span({className:'Text'},this.props.text),
       React.DOM.img({className:'Imgg', src: this.props.url}),

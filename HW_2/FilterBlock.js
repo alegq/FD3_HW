@@ -56,7 +56,7 @@ var FilterBlock = React.createClass({
            );
 
         return React.DOM.div( {className:'FilterBlock'},
-           // React.createElement(VotesQuestion, {question:this.props.question} ),
+           // React.createElement(Heading, {heading:this.props.heading} ),
            // React.DOM.div( {className:'Answers'}, answersCode ),
           //  ((this.state.workMode==1)&&this.state.selectedAnswerCode)
                 //?

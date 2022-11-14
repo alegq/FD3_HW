@@ -1,0 +1,42 @@
+﻿.Product
+{
+  padding: 2px 0;
+  /*border: double gray 3px;*/
+}
+
+
+.tdProduct{
+  border: 1px solid blue;
+  /*height: 100px;*/
+}
+
+.tables{
+  border-collapse: collapse;
+}
+
+.Product .Count
+{
+  //float: right;
+  width: 30px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.Product .Text
+{
+
+  margin-right: 30px;
+  width: 150px;
+}
+
+.Product .Imgg
+{
+  width: 70px;
+  height: 70px;
+}
+.Product .Price
+{
+  position: relative;
+  top: 50%;
+  width: 50px;
+}

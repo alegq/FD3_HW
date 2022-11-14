@@ -1,27 +1,27 @@
-﻿.VotesBlockAnswer
+﻿.Product
 {
   padding: 2px 0;
 }
 
-.VotesBlockAnswer .Count
+.Product .Count
 {
   float: right;
-  width: 30px;
+  width: 80px;
   font-weight: bold;
   text-align: right;
 }
 
-.VotesBlockAnswer .Text
+.Product .Text
 {
   margin-right: 30px;
 }
 
-.VotesBlockAnswer .Imgg
+.Product .Imgg
 {
   width: 70px;
   height: 70px;
 }
-.VotesBlockAnswer .Price
+.Product .Price
 {
   position: relative;
   top: 50%;
