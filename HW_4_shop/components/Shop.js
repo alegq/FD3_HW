@@ -69,7 +69,7 @@ class Shop extends React.Component {
                     <br/>
                     {'product' + this.state.selectedProductCode}
                     <br/>
-                    {'Price:' + ' потом'}
+                    {'Price:' + ' потомм'}
 
 
                 </div>
