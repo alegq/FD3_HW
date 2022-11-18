@@ -19,8 +19,9 @@ class Product extends React.Component {
         this.props.cbSelected(this.props.code);
     };
 
-    editProduct = () =>{
+    editProduct = (EO) =>{
         this.props.cbEditProduct(this.props.code);
+        EO.stopPropagation()
     }
 
     deleteProduct = (EO) => {
