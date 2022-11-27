@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5785a623-1d21-4d1f-b2d1-784992a40be3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HW_4_shop/components/Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW_4_shop/components/Shop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5_hoc/components/DoubleButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5_hoc/components/RainbowFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +120,8 @@
       <workItem from="1664377007871" duration="85803000" />
       <workItem from="1668425664536" duration="11108000" />
       <workItem from="1668589893821" duration="12886000" />
-      <workItem from="1668626886240" duration="16000" />
+      <workItem from="1668626886240" duration="716000" />
+      <workItem from="1669545176126" duration="10949000" />
     </task>
     <task id="LOCAL-00001" summary="Hw_2">
       <created>1666105129635</created>
@@ -189,6 +192,9 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
