@@ -9,6 +9,7 @@ class Product extends React.Component {
         code: PropTypes.number.isRequired,
         count: PropTypes.number.isRequired,
         text: PropTypes.string.isRequired,
+        buttDisabled: PropTypes.number.isRequired,
         cbSelected: PropTypes.func.isRequired,
         cbEditProduct: PropTypes.func.isRequired,
         cbDeletProduct: PropTypes.func.isRequired,
@@ -30,7 +31,6 @@ class Product extends React.Component {
     };
 
     render() {
-
         return (
             <tr className={'Product'} onClick={this.productClicked}
                 style={{backgroundColor:(this.props.selectedProductCode===this.props.code)?'red':'white'}}>
@@ -52,11 +52,11 @@ class Product extends React.Component {
                 </td>
 
                 <td className={'tdProduct'}>
-                    <input type={'button'} value={'Edit'} onClick={this.editProduct}/>
+                    <input type={'button'} value={'Edit'} disabled={this.props.buttDisabled} onClick={this.editProduct}/>
                 </td>
 
                 <td className={'tdProduct'}>
-                    <input type={'button'} value={'Delete'} onClick={this.deleteProduct}/>
+                    <input type={'button'} value={'Delete'} disabled={this.props.buttDisabled} onClick={this.deleteProduct}/>
                 </td>
             </tr>
 
