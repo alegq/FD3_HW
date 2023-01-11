@@ -1,15 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="5785a623-1d21-4d1f-b2d1-784992a40be3" name="Default Changelist" comment="Hw_2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW_4_shop/components/Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW_4_shop/components/Shop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW_4_shop/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/HW_4_shop/package.json" afterDir="false" />
+=======
+    <list default="true" id="5785a623-1d21-4d1f-b2d1-784992a40be3" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/HW_4_shop/components/NewProduct.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_4_shop/components/NewProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_4_shop/components/InfoProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW_4_shop/components/InfoProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_4_shop/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW_4_shop/components/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_4_shop/components/Shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW_4_shop/components/Shop.js" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/HW_5_hoc/components/DoubleButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_5_hoc/components/RainbowFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 94442d519db63bee740261f22725ae2d34584267
+>>>>>>> 1900586fb093145316437d219aab348166d28d82
     </list>
+    <ignored path="$PROJECT_DIR$/HW_4_shop/node_modules/" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW_4_shop/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HW_4_shop/components/Shop.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW_4_shop/components/Product.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW_4_shop/components/NewProduct.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HW_4_shop/components/InfoProduct.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>InfoProduct</find>
+      <find>console</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +138,12 @@
         <option value="$PROJECT_DIR$/HW_4_shop/App.js" />
         <option value="$PROJECT_DIR$/HW_3/my_components/Product.js" />
         <option value="$PROJECT_DIR$/HW_3/my_components/Heading.js" />
+        <option value="$PROJECT_DIR$/HW_4_shop/components/newProduct.js" />
+        <option value="$PROJECT_DIR$/HW_4_shop/components/NewProduct.css" />
+        <option value="$PROJECT_DIR$/HW_4_shop/package.json" />
         <option value="$PROJECT_DIR$/HW_4_shop/components/Product.js" />
+        <option value="$PROJECT_DIR$/HW_4_shop/components/InfoProduct.js" />
+        <option value="$PROJECT_DIR$/HW_4_shop/components/NewProduct.js" />
         <option value="$PROJECT_DIR$/HW_4_shop/components/Shop.js" />
       </list>
     </option>
@@ -105,7 +201,19 @@
       <recent name="F:\Project\React\FD3_homework\HW_4_br" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -120,13 +228,22 @@
       <workItem from="1664377007871" duration="85803000" />
       <workItem from="1668425664536" duration="11108000" />
       <workItem from="1668589893821" duration="12886000" />
+<<<<<<< HEAD
+      <workItem from="1668626886240" duration="16000" />
+      <workItem from="1669273251870" duration="14557000" />
+=======
       <workItem from="1668626886240" duration="716000" />
+<<<<<<< HEAD
       <workItem from="1669545176126" duration="11322000" />
       <workItem from="1671650129007" duration="626000" />
       <workItem from="1672084153640" duration="3029000" />
       <workItem from="1672658976495" duration="13705000" />
       <workItem from="1672771443928" duration="3265000" />
       <workItem from="1672853523453" duration="7445000" />
+=======
+      <workItem from="1669545176126" duration="10949000" />
+>>>>>>> 94442d519db63bee740261f22725ae2d34584267
+>>>>>>> 1900586fb093145316437d219aab348166d28d82
     </task>
     <task id="LOCAL-00001" summary="Hw_2">
       <created>1666105129635</created>
@@ -146,7 +263,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117917000" />
+    <option name="totallyTimeSpent" value="161471000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -199,14 +316,25 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
+<<<<<<< HEAD
+    <option name="version" value="1" />
+=======
     <option name="version" value="3" />
+>>>>>>> 94442d519db63bee740261f22725ae2d34584267
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -231,13 +359,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Hw_2" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HW_2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW_2/FilterBlock.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -407,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW_4_shop/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW_4_shop/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -450,19 +564,6 @@
     <entry file="file://$PROJECT_DIR$/HW_4_shop/bundle.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW_4_shop/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW_4_shop/components/Shop.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW_3/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -495,22 +596,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW_4_shop/answers.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW_4_shop/components/Shop.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW_4_shop/components/Product.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW_4_shop/components/NewProduct.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW_4_shop/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW_4_shop/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HW_4_shop/components/Product.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="71" />
+        <state relative-caret-position="305">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW_4_shop/components/InfoProduct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW_4_shop/components/NewProduct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HW_4_shop/components/Shop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="82" column="20" lean-forward="true" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+        <state relative-caret-position="1224">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
