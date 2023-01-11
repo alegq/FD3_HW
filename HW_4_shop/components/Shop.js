@@ -74,7 +74,7 @@ class Shop extends React.Component {
                 <input type="button" value={'New product'} onClick={this.newpProduct}/>
 
                 {
-                    //(this.state.modeInfo )
+                    (this.state.modeInfo )&&
                     <InfoProduct code={this.state.selectedProductCode} price={productEditInfo.price}
                                  name={productEditInfo.text} url={productEditInfo.url} quantity={productEditInfo.count}
                                  mode={this.state.modeInfo}

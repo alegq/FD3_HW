@@ -1,0 +1,41 @@
+﻿div.MobileClient
+{
+  padding: 2px 0;
+}
+
+span.MobileClientBalance
+{
+  float: right;
+  width: 30px;
+  font-weight: bold;
+  text-align: right;
+}
+.MobileClient{
+  padding: 2px 0;
+}
+
+.MobileClient .Activ{
+   margin-right: 30px;
+}
+.MobileClient .MobileClientBalance{
+  margin-right: 30px;
+}
+span.MobileClientFIO
+{
+  margin-right: 30px;
+}
+
+.tables{
+  border-collapse: collapse;
+  /*border-width: 2px;*/
+  /*border-color: black;*/
+  /*border: 1px solid black;*/
+
+
+}
+
+.tdProduct{
+  /*border: 1px solid blue;*/
+  border-bottom: 1px solid #ddd;
+  /*height: 100px;*/
+}

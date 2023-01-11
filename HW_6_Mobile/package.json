@@ -1,8 +1,7 @@
-
 {
-  "name": "votesblock",
+  "name": "mobile",
   "version": "1.0.0",
-  "description": "блок голосования",
+  "description": "мобильная компания",
   "main": "App.js",
   "scripts": {
     "build": ".\\node_modules\\.bin\\webpack",

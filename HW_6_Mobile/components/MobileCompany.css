@@ -1,0 +1,18 @@
+﻿.MobileCompany
+{
+  /*border-bottom: 1px solid #ddd;*/
+  border-top: 1px solid #ddd;;
+  width: 700px;
+  padding: 3px 7px;
+  /*background-color: lightyellow;*/
+}
+
+.MobileCompanyName
+{
+  font-weight: bold;
+}
+
+.MobileCompanyClients
+{
+  padding-top: 5px;
+}
