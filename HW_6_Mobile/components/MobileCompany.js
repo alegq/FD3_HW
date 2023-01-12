@@ -71,8 +71,24 @@ class MobileCompany extends React.PureComponent {
     };
 
     filterClient = () => {
-        
+        this.setState({clients:this.props.clients});
     };
+
+    prActiveFilter= (client) =>{
+        this.setState({clients:this.state.clients.filter(this.activeFilter)});
+    }
+
+    activeFilter= (client) =>{
+       return client.balance >= 0;
+    }
+
+    prblockedFilter= (client) =>{
+        this.setState({clients:this.state.clients.filter(this.blockedFilter)});
+    }
+
+    blockedFilter= (client) =>{
+        return client.balance < 0;
+    }
 
 
     render() {
@@ -86,8 +102,8 @@ class MobileCompany extends React.PureComponent {
     return (
       <div className='MobileCompany'>
           <input type="button" value="Все" onClick={this.filterClient} />
-          <input type="button" value="Активные" onClick={this.filterClient} />
-          <input type="button" value="Заблокированные" onClick={this.filterClient} />
+          <input type="button" value="Активные" onClick={this.prActiveFilter} />
+          <input type="button" value="Заблокированные" onClick={this.prblockedFilter} />
           <div className='MobileCompanyName'>Компания &laquo;{this.state.name}&raquo;</div>
           <table className={'tables'}>
             <tbody className='MobileCompanyClients'>

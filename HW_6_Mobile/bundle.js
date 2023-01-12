@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -261,9 +261,9 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(9);
-} else {
   module.exports = __webpack_require__(10);
+} else {
+  module.exports = __webpack_require__(11);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -392,9 +392,9 @@ module.exports = ReactPropTypesSecret;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(13);
-} else {
   module.exports = __webpack_require__(14);
+} else {
+  module.exports = __webpack_require__(15);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -416,11 +416,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(22)(ReactIs.isElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(23)(ReactIs.isElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(24)();
+  module.exports = __webpack_require__(25)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -433,9 +433,9 @@ if (process.env.NODE_ENV !== 'production') {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(20);
-} else {
   module.exports = __webpack_require__(21);
+} else {
+  module.exports = __webpack_require__(22);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -454,22 +454,44 @@ module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mobileEvents = undefined;
+
+var _events = __webpack_require__(27);
+
+var mobileEvents = new _events.EventEmitter();
+// в потоке voteEvents будут все события, связанные с мобильным приложением
+// событие "EAnswerClicked" - кликнут вариант ответа, его сэмиттирует VotesAnswer и примет VotesBlock
+// событие "EFreeAnswerTextChanged" - изменён текст свободного ответа, его сэмиттирует VotesAnswer и примет VotesBlock
+// лучше работать не с текстовыми литералами, а объявить переменные с соответствующими значениями
+
+exports.mobileEvents = mobileEvents;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(11);
+var _reactDom = __webpack_require__(12);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _MobileCompany = __webpack_require__(19);
+var _MobileCompany = __webpack_require__(20);
 
 var _MobileCompany2 = _interopRequireDefault(_MobileCompany);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var companyName = 'Velcom';
-var clientsArr = [{ id: 101, fio: "Иванов И.И.", balance: 200 }, { id: 105, fio: "Сидоров С.С.", balance: 250 }, { id: 110, fio: "Петров П.П.", balance: 180 }, { id: 120, fio: "Григорьев Г.Г.", balance: 220 }];
+var clientsArr = [{ id: 100, lastName: "Иванов", firstName: "Иван", middleName: "Иванович", balance: 200 }, { id: 101, lastName: "Сидоров", firstName: "Сидор", middleName: "Сидорович", balance: -4 }, { id: 102, lastName: "Петров", firstName: "Петр", middleName: "Петрович", balance: 180 }, { id: 103, lastName: "Григорьев", firstName: "Григорий", middleName: "Григорьевич", balance: 220 }];
 
 _reactDom2.default.render(_react2.default.createElement(_MobileCompany2.default, {
   name: companyName,
@@ -477,7 +499,7 @@ _reactDom2.default.render(_react2.default.createElement(_MobileCompany2.default,
 }), document.getElementById('container'));
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -507,7 +529,7 @@ exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.u
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2848,7 +2870,7 @@ exports.version = ReactVersion;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2886,15 +2908,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(12);
+  module.exports = __webpack_require__(13);
 } else {
-  module.exports = __webpack_require__(15);
+  module.exports = __webpack_require__(16);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3198,7 +3220,7 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!rk(c))throw Er
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3225,7 +3247,7 @@ exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3879,7 +3901,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3901,7 +3923,7 @@ if (process.env.NODE_ENV !== "production") {
 var React = __webpack_require__(1);
 var _assign = __webpack_require__(2);
 var Scheduler = __webpack_require__(4);
-var tracing = __webpack_require__(16);
+var tracing = __webpack_require__(17);
 
 var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 
@@ -30149,22 +30171,22 @@ exports.version = ReactVersion;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(17);
-} else {
   module.exports = __webpack_require__(18);
+} else {
+  module.exports = __webpack_require__(19);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30180,7 +30202,7 @@ var b=0;exports.__interactionsRef=null;exports.__subscriberRef=null;exports.unst
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30535,14 +30557,14 @@ exports.unstable_wrap = unstable_wrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -30555,13 +30577,17 @@ var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _MobileClient = __webpack_require__(25);
+var _MobileClient = __webpack_require__(26);
 
 var _MobileClient2 = _interopRequireDefault(_MobileClient);
 
-__webpack_require__(27);
+var _events = __webpack_require__(8);
+
+__webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -30570,87 +30596,107 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var MobileCompany = function (_React$PureComponent) {
-  _inherits(MobileCompany, _React$PureComponent);
+    _inherits(MobileCompany, _React$PureComponent);
 
-  function MobileCompany() {
-    var _ref;
+    function MobileCompany() {
+        var _ref;
 
-    var _temp, _this, _ret;
+        var _temp, _this, _ret;
 
-    _classCallCheck(this, MobileCompany);
+        _classCallCheck(this, MobileCompany);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MobileCompany.__proto__ || Object.getPrototypeOf(MobileCompany)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            name: _this.props.name,
+            clients: _this.props.clients
+        }, _this.componentDidMount = function () {
+            _events.mobileEvents.addListener('EDeliteClicked', _this.deliteClient);
+            // voteEvents.addListener('EFreeAnswerTextChanged',this.freeAnswerTextChanged);
+        }, _this.componentWillUnmount = function () {
+            _events.mobileEvents.removeListener('EDeliteClicked', _this.deliteClient);
+            // voteEvents.removeListener('EFreeAnswerTextChanged',this.freeAnswerTextChanged);
+        }, _this.deliteClient = function (id) {
+            console.log('cсобытие ' + id);
+            _this.setState({ clients: _this.state.clients.filter(function (v) {
+                    return v.id !== id;
+                }) });
+        }, _this.setName1 = function () {
+            _this.setState({ name: 'МТС' });
+        }, _this.setName2 = function () {
+            _this.setState({ name: 'Velcom' });
+        }, _this.setBalance = function (clientId, newBalance) {
+            var newClients = _this.state.clients;
+            newClients.forEach(function (c) {
+                if (c.id == clientId) c.balance = newBalance;
+            });
+            _this.setState({ clients: newClients });
+        }, _this.setBalance1 = function () {
+            _this.setBalance(105, 230);
+        }, _this.setBalance2 = function () {
+            _this.setBalance(105, 250);
+        }, _this.addClient = function () {
+            var newClient = { id: _this.state.clients.length + 100, lastName: "Иванов", firstName: "Иван", middleName: "Иванович", balance: 0 };
+            _this.setState({ clients: [].concat(_toConsumableArray(_this.state.clients), [newClient]) });
+        }, _this.filterClient = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MobileCompany.__proto__ || Object.getPrototypeOf(MobileCompany)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      name: _this.props.name,
-      clients: _this.props.clients
-    }, _this.setName1 = function () {
-      _this.setState({ name: 'МТС' });
-    }, _this.setName2 = function () {
-      _this.setState({ name: 'Velcom' });
-    }, _this.setBalance = function (clientId, newBalance) {
-      var newClients = _this.state.clients;
-      newClients.forEach(function (c) {
-        if (c.id == clientId) c.balance = newBalance;
-      });
-      _this.setState({ clients: newClients });
-    }, _this.setBalance1 = function () {
-      _this.setBalance(105, 230);
-    }, _this.setBalance2 = function () {
-      _this.setBalance(105, 250);
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
+    _createClass(MobileCompany, [{
+        key: 'render',
+        value: function render() {
 
-  _createClass(MobileCompany, [{
-    key: 'render',
-    value: function render() {
+            console.log("MobileCompany render");
 
-      console.log("MobileCompany render");
+            var clientsCode = this.state.clients.map(function (client) {
+                return _react2.default.createElement(_MobileClient2.default, { key: client.id, info: client });
+            });
 
-      var clientsCode = this.state.clients.map(function (client) {
-        return _react2.default.createElement(_MobileClient2.default, { key: client.id, info: client });
-      });
+            return _react2.default.createElement(
+                'div',
+                { className: 'MobileCompany' },
+                _react2.default.createElement('input', { type: 'button', value: '\u0412\u0441\u0435', onClick: this.filterClient }),
+                _react2.default.createElement('input', { type: 'button', value: '\u0410\u043A\u0442\u0438\u0432\u043D\u044B\u0435', onClick: this.filterClient }),
+                _react2.default.createElement('input', { type: 'button', value: '\u0417\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435', onClick: this.filterClient }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'MobileCompanyName' },
+                    '\u041A\u043E\u043C\u043F\u0430\u043D\u0438\u044F \xAB',
+                    this.state.name,
+                    '\xBB'
+                ),
+                _react2.default.createElement(
+                    'table',
+                    { className: 'tables' },
+                    _react2.default.createElement(
+                        'tbody',
+                        { className: 'MobileCompanyClients' },
+                        clientsCode
+                    )
+                ),
+                _react2.default.createElement('input', { type: 'button', value: '\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043A\u043B\u0438\u0435\u043D\u0442\u0430', onClick: this.addClient })
+            );
+        }
+    }]);
 
-      return _react2.default.createElement(
-        'div',
-        { className: 'MobileCompany' },
-        _react2.default.createElement('input', { type: 'button', value: '=\u041C\u0422\u0421', onClick: this.setName1 }),
-        _react2.default.createElement('input', { type: 'button', value: '=Velcom', onClick: this.setName2 }),
-        _react2.default.createElement(
-          'div',
-          { className: 'MobileCompanyName' },
-          '\u041A\u043E\u043C\u043F\u0430\u043D\u0438\u044F \xAB',
-          this.state.name,
-          '\xBB'
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'MobileCompanyClients' },
-          clientsCode
-        ),
-        _react2.default.createElement('input', { type: 'button', value: '\u0421\u0438\u0434\u043E\u0440\u043E\u0432=230', onClick: this.setBalance1 }),
-        _react2.default.createElement('input', { type: 'button', value: '\u0421\u0438\u0434\u043E\u0440\u043E\u0432=250', onClick: this.setBalance2 })
-      );
-    }
-  }]);
-
-  return MobileCompany;
+    return MobileCompany;
 }(_react2.default.PureComponent);
 
 MobileCompany.propTypes = {
-  name: _propTypes2.default.string.isRequired,
-  clients: _propTypes2.default.arrayOf(_propTypes2.default.shape({
-    id: _propTypes2.default.number.isRequired,
-    fio: _propTypes2.default.string.isRequired,
-    balance: _propTypes2.default.number.isRequired
-  }))
+    name: _propTypes2.default.string.isRequired,
+    clients: _propTypes2.default.arrayOf(_propTypes2.default.shape({
+        id: _propTypes2.default.number.isRequired,
+        lastName: _propTypes2.default.string.isRequired,
+        firstName: _propTypes2.default.string.isRequired,
+        middleName: _propTypes2.default.string.isRequired,
+        balance: _propTypes2.default.number.isRequired
+    }))
 };
 exports.default = MobileCompany;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30672,7 +30718,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30861,7 +30907,7 @@ exports.typeOf = typeOf;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30879,7 +30925,7 @@ var assign = __webpack_require__(2);
 
 var ReactPropTypesSecret = __webpack_require__(3);
 var has = __webpack_require__(7);
-var checkPropTypes = __webpack_require__(23);
+var checkPropTypes = __webpack_require__(24);
 
 var printWarning = function() {};
 
@@ -31479,7 +31525,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31590,7 +31636,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31662,7 +31708,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31682,7 +31728,9 @@ var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-__webpack_require__(26);
+var _events = __webpack_require__(8);
+
+__webpack_require__(28);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31706,13 +31754,41 @@ var MobileClient = function (_React$PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MobileClient.__proto__ || Object.getPrototypeOf(MobileClient)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      info: _this.props.info
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MobileClient.__proto__ || Object.getPrototypeOf(MobileClient)).call.apply(_ref, [this].concat(args))), _this), _this.newLastNameRef = _react2.default.createRef(), _this.newFirstNameRef = _react2.default.createRef(), _this.newMiddleNameRef = _react2.default.createRef(), _this.newBalanceRef = _react2.default.createRef(), _this.newTextRef = _react2.default.createRef(), _this.state = {
+      info: _this.props.info,
+      modeEdit: 0
+    }, _this.deliteClicked = function (EO) {
+      //this.props.cbSelected(this.props.code);
+      _events.mobileEvents.emit('EDeliteClicked', _this.state.info.id);
+    }, _this.editClient = function () {
+      _this.setState({ modeEdit: 1 });
+    }, _this.changeInfo = function () {
+      console.log(_this.newLastNameRef.current.value);
+      var info = _this.state.info;
+      var ltName = _this.newLastNameRef.current.value;
+      var fsName = _this.newFirstNameRef.current.value;
+      var mlName = _this.newMiddleNameRef.current.value;
+      var balance = _this.newBalanceRef.current.value;
+      info.lastName = ltName;
+      info.firstName = fsName;
+      info.middleName = mlName;
+      info.balance = balance;
+      _this.setState({ info: info });
+    }, _this.saveEdit = function () {
+      _this.setState({ modeEdit: 0 });
     }, _this.componentDidUpdate = function (oldProps, oldState) {
       console.log("MobileClient id=" + _this.props.info.id + " componentDidUpdate");
       if (_this.props.balance !== _this.state.balance) _this.setState({ balance: _this.props.balance });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
+
+  // deliteClient = () => {
+  //   if ( this.newTextRef.current ) {
+  //     let newText=this.newTextRef.current.value;
+  //     this.setState({question:newText});
+  //   }
+  // };
+
 
   _createClass(MobileClient, [{
     key: 'render',
@@ -31721,17 +31797,79 @@ var MobileClient = function (_React$PureComponent) {
       console.log("MobileClient id=" + this.state.info.id + " render");
 
       return _react2.default.createElement(
-        'div',
-        { className: 'MobileClient' },
+        'tr',
+        { className: 'MobileClient', onClick: this.productClicked
+          // style={{backgroundColor:(this.props.selectedProductCode===this.props.code)?'red':'white'}}
+        },
         _react2.default.createElement(
-          'span',
-          { className: 'MobileClientBalance' },
-          this.state.info.balance
+          'td',
+          { className: 'tdProduct' },
+          !this.state.modeEdit ? _react2.default.createElement(
+            'span',
+            { className: 'MobileClientFIO' },
+            this.state.info.lastName
+          ) : _react2.default.createElement('input', { type: 'text', defaultValue: this.state.info.lastName, onChange: this.changeInfo, ref: this.newLastNameRef })
         ),
         _react2.default.createElement(
-          'span',
-          { className: 'MobileClientFIO' },
-          this.state.info.fio
+          'td',
+          { className: 'tdProduct' },
+          !this.state.modeEdit ? _react2.default.createElement(
+            'span',
+            { className: 'MobileClientFIO' },
+            this.state.info.firstName
+          ) : _react2.default.createElement('input', { type: 'text', defaultValue: this.state.info.firstName, onChange: this.changeInfo, ref: this.newFirstNameRef })
+        ),
+        _react2.default.createElement(
+          'td',
+          { className: 'tdProduct' },
+          !this.state.modeEdit ? _react2.default.createElement(
+            'span',
+            { className: 'MobileClientFIO' },
+            this.state.info.middleName
+          ) : _react2.default.createElement('input', { type: 'text', defaultValue: this.state.info.middleName, onChange: this.changeInfo, ref: this.newMiddleNameRef })
+        ),
+        _react2.default.createElement(
+          'td',
+          { className: 'tdProduct' },
+          !this.state.modeEdit ? _react2.default.createElement(
+            'span',
+            { className: 'MobileClientBalance' },
+            this.state.info.balance
+          ) : _react2.default.createElement('input', { type: 'text', defaultValue: this.state.info.balance, onChange: this.changeInfo, ref: this.newBalanceRef })
+        ),
+        _react2.default.createElement(
+          'td',
+          { className: 'tdProduct' },
+          _react2.default.createElement(
+            'span',
+            { className: 'Activ' },
+            this.state.info.balance >= 0 && _react2.default.createElement(
+              'span',
+              { style: { backgroundColor: 'green' } },
+              'active'
+            ),
+            this.state.info.balance < 0 && _react2.default.createElement(
+              'span',
+              { style: { backgroundColor: 'red' } },
+              'bloked'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'td',
+          { className: 'tdProduct' },
+          _react2.default.createElement('input', { type: 'button', value: 'Редактировать', onClick: this.editClient })
+        ),
+        _react2.default.createElement(
+          'td',
+          { className: 'tdProduct' },
+          this.state.modeEdit !== 0 && _react2.default.createElement('input', { type: 'button', value: 'Save', onClick: this.saveEdit })
+        ),
+        _react2.default.createElement(
+          'td',
+          { className: 'tdProduct', ref: this.newTextRef },
+          _react2.default.createElement('input', { type: 'button', value: 'Delete', ref: this.newTextRef, onClick: this.deliteClicked
+          })
         )
       );
     }
@@ -31743,20 +31881,526 @@ var MobileClient = function (_React$PureComponent) {
 MobileClient.propTypes = {
   info: _propTypes2.default.shape({
     id: _propTypes2.default.number.isRequired,
-    fio: _propTypes2.default.string.isRequired,
+    lastName: _propTypes2.default.string.isRequired,
+    firstName: _propTypes2.default.string.isRequired,
+    middleName: _propTypes2.default.string.isRequired,
     balance: _propTypes2.default.number.isRequired
   })
 };
 exports.default = MobileClient;
 
 /***/ }),
-/* 26 */
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+var R = typeof Reflect === 'object' ? Reflect : null
+var ReflectApply = R && typeof R.apply === 'function'
+  ? R.apply
+  : function ReflectApply(target, receiver, args) {
+    return Function.prototype.apply.call(target, receiver, args);
+  }
+
+var ReflectOwnKeys
+if (R && typeof R.ownKeys === 'function') {
+  ReflectOwnKeys = R.ownKeys
+} else if (Object.getOwnPropertySymbols) {
+  ReflectOwnKeys = function ReflectOwnKeys(target) {
+    return Object.getOwnPropertyNames(target)
+      .concat(Object.getOwnPropertySymbols(target));
+  };
+} else {
+  ReflectOwnKeys = function ReflectOwnKeys(target) {
+    return Object.getOwnPropertyNames(target);
+  };
+}
+
+function ProcessEmitWarning(warning) {
+  if (console && console.warn) console.warn(warning);
+}
+
+var NumberIsNaN = Number.isNaN || function NumberIsNaN(value) {
+  return value !== value;
+}
+
+function EventEmitter() {
+  EventEmitter.init.call(this);
+}
+module.exports = EventEmitter;
+module.exports.once = once;
+
+// Backwards-compat with node 0.10.x
+EventEmitter.EventEmitter = EventEmitter;
+
+EventEmitter.prototype._events = undefined;
+EventEmitter.prototype._eventsCount = 0;
+EventEmitter.prototype._maxListeners = undefined;
+
+// By default EventEmitters will print a warning if more than 10 listeners are
+// added to it. This is a useful default which helps finding memory leaks.
+var defaultMaxListeners = 10;
+
+function checkListener(listener) {
+  if (typeof listener !== 'function') {
+    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+  }
+}
+
+Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
+  enumerable: true,
+  get: function() {
+    return defaultMaxListeners;
+  },
+  set: function(arg) {
+    if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
+      throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
+    }
+    defaultMaxListeners = arg;
+  }
+});
+
+EventEmitter.init = function() {
+
+  if (this._events === undefined ||
+      this._events === Object.getPrototypeOf(this)._events) {
+    this._events = Object.create(null);
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+};
+
+// Obviously not all Emitters should be limited to 10. This function allows
+// that to be increased. Set to zero for unlimited.
+EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
+  if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
+    throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
+  }
+  this._maxListeners = n;
+  return this;
+};
+
+function _getMaxListeners(that) {
+  if (that._maxListeners === undefined)
+    return EventEmitter.defaultMaxListeners;
+  return that._maxListeners;
+}
+
+EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
+  return _getMaxListeners(this);
+};
+
+EventEmitter.prototype.emit = function emit(type) {
+  var args = [];
+  for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
+  var doError = (type === 'error');
+
+  var events = this._events;
+  if (events !== undefined)
+    doError = (doError && events.error === undefined);
+  else if (!doError)
+    return false;
+
+  // If there is no 'error' event listener then throw.
+  if (doError) {
+    var er;
+    if (args.length > 0)
+      er = args[0];
+    if (er instanceof Error) {
+      // Note: The comments on the `throw` lines are intentional, they show
+      // up in Node's output if this results in an unhandled exception.
+      throw er; // Unhandled 'error' event
+    }
+    // At least give some kind of context to the user
+    var err = new Error('Unhandled error.' + (er ? ' (' + er.message + ')' : ''));
+    err.context = er;
+    throw err; // Unhandled 'error' event
+  }
+
+  var handler = events[type];
+
+  if (handler === undefined)
+    return false;
+
+  if (typeof handler === 'function') {
+    ReflectApply(handler, this, args);
+  } else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      ReflectApply(listeners[i], this, args);
+  }
+
+  return true;
+};
+
+function _addListener(target, type, listener, prepend) {
+  var m;
+  var events;
+  var existing;
+
+  checkListener(listener);
+
+  events = target._events;
+  if (events === undefined) {
+    events = target._events = Object.create(null);
+    target._eventsCount = 0;
+  } else {
+    // To avoid recursion in the case that type === "newListener"! Before
+    // adding it to the listeners, first emit "newListener".
+    if (events.newListener !== undefined) {
+      target.emit('newListener', type,
+                  listener.listener ? listener.listener : listener);
+
+      // Re-assign `events` because a newListener handler could have caused the
+      // this._events to be assigned to a new object
+      events = target._events;
+    }
+    existing = events[type];
+  }
+
+  if (existing === undefined) {
+    // Optimize the case of one listener. Don't need the extra array object.
+    existing = events[type] = listener;
+    ++target._eventsCount;
+  } else {
+    if (typeof existing === 'function') {
+      // Adding the second element, need to change to array.
+      existing = events[type] =
+        prepend ? [listener, existing] : [existing, listener];
+      // If we've already got an array, just append.
+    } else if (prepend) {
+      existing.unshift(listener);
+    } else {
+      existing.push(listener);
+    }
+
+    // Check for listener leak
+    m = _getMaxListeners(target);
+    if (m > 0 && existing.length > m && !existing.warned) {
+      existing.warned = true;
+      // No error code for this since it is a Warning
+      // eslint-disable-next-line no-restricted-syntax
+      var w = new Error('Possible EventEmitter memory leak detected. ' +
+                          existing.length + ' ' + String(type) + ' listeners ' +
+                          'added. Use emitter.setMaxListeners() to ' +
+                          'increase limit');
+      w.name = 'MaxListenersExceededWarning';
+      w.emitter = target;
+      w.type = type;
+      w.count = existing.length;
+      ProcessEmitWarning(w);
+    }
+  }
+
+  return target;
+}
+
+EventEmitter.prototype.addListener = function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+};
+
+EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+EventEmitter.prototype.prependListener =
+    function prependListener(type, listener) {
+      return _addListener(this, type, listener, true);
+    };
+
+function onceWrapper() {
+  if (!this.fired) {
+    this.target.removeListener(this.type, this.wrapFn);
+    this.fired = true;
+    if (arguments.length === 0)
+      return this.listener.call(this.target);
+    return this.listener.apply(this.target, arguments);
+  }
+}
+
+function _onceWrap(target, type, listener) {
+  var state = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
+  var wrapped = onceWrapper.bind(state);
+  wrapped.listener = listener;
+  state.wrapFn = wrapped;
+  return wrapped;
+}
+
+EventEmitter.prototype.once = function once(type, listener) {
+  checkListener(listener);
+  this.on(type, _onceWrap(this, type, listener));
+  return this;
+};
+
+EventEmitter.prototype.prependOnceListener =
+    function prependOnceListener(type, listener) {
+      checkListener(listener);
+      this.prependListener(type, _onceWrap(this, type, listener));
+      return this;
+    };
+
+// Emits a 'removeListener' event if and only if the listener was removed.
+EventEmitter.prototype.removeListener =
+    function removeListener(type, listener) {
+      var list, events, position, i, originalListener;
+
+      checkListener(listener);
+
+      events = this._events;
+      if (events === undefined)
+        return this;
+
+      list = events[type];
+      if (list === undefined)
+        return this;
+
+      if (list === listener || list.listener === listener) {
+        if (--this._eventsCount === 0)
+          this._events = Object.create(null);
+        else {
+          delete events[type];
+          if (events.removeListener)
+            this.emit('removeListener', type, list.listener || listener);
+        }
+      } else if (typeof list !== 'function') {
+        position = -1;
+
+        for (i = list.length - 1; i >= 0; i--) {
+          if (list[i] === listener || list[i].listener === listener) {
+            originalListener = list[i].listener;
+            position = i;
+            break;
+          }
+        }
+
+        if (position < 0)
+          return this;
+
+        if (position === 0)
+          list.shift();
+        else {
+          spliceOne(list, position);
+        }
+
+        if (list.length === 1)
+          events[type] = list[0];
+
+        if (events.removeListener !== undefined)
+          this.emit('removeListener', type, originalListener || listener);
+      }
+
+      return this;
+    };
+
+EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
+
+EventEmitter.prototype.removeAllListeners =
+    function removeAllListeners(type) {
+      var listeners, events, i;
+
+      events = this._events;
+      if (events === undefined)
+        return this;
+
+      // not listening for removeListener, no need to emit
+      if (events.removeListener === undefined) {
+        if (arguments.length === 0) {
+          this._events = Object.create(null);
+          this._eventsCount = 0;
+        } else if (events[type] !== undefined) {
+          if (--this._eventsCount === 0)
+            this._events = Object.create(null);
+          else
+            delete events[type];
+        }
+        return this;
+      }
+
+      // emit removeListener for all listeners on all events
+      if (arguments.length === 0) {
+        var keys = Object.keys(events);
+        var key;
+        for (i = 0; i < keys.length; ++i) {
+          key = keys[i];
+          if (key === 'removeListener') continue;
+          this.removeAllListeners(key);
+        }
+        this.removeAllListeners('removeListener');
+        this._events = Object.create(null);
+        this._eventsCount = 0;
+        return this;
+      }
+
+      listeners = events[type];
+
+      if (typeof listeners === 'function') {
+        this.removeListener(type, listeners);
+      } else if (listeners !== undefined) {
+        // LIFO order
+        for (i = listeners.length - 1; i >= 0; i--) {
+          this.removeListener(type, listeners[i]);
+        }
+      }
+
+      return this;
+    };
+
+function _listeners(target, type, unwrap) {
+  var events = target._events;
+
+  if (events === undefined)
+    return [];
+
+  var evlistener = events[type];
+  if (evlistener === undefined)
+    return [];
+
+  if (typeof evlistener === 'function')
+    return unwrap ? [evlistener.listener || evlistener] : [evlistener];
+
+  return unwrap ?
+    unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
+}
+
+EventEmitter.prototype.listeners = function listeners(type) {
+  return _listeners(this, type, true);
+};
+
+EventEmitter.prototype.rawListeners = function rawListeners(type) {
+  return _listeners(this, type, false);
+};
+
+EventEmitter.listenerCount = function(emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+};
+
+EventEmitter.prototype.listenerCount = listenerCount;
+function listenerCount(type) {
+  var events = this._events;
+
+  if (events !== undefined) {
+    var evlistener = events[type];
+
+    if (typeof evlistener === 'function') {
+      return 1;
+    } else if (evlistener !== undefined) {
+      return evlistener.length;
+    }
+  }
+
+  return 0;
+}
+
+EventEmitter.prototype.eventNames = function eventNames() {
+  return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
+};
+
+function arrayClone(arr, n) {
+  var copy = new Array(n);
+  for (var i = 0; i < n; ++i)
+    copy[i] = arr[i];
+  return copy;
+}
+
+function spliceOne(list, index) {
+  for (; index + 1 < list.length; index++)
+    list[index] = list[index + 1];
+  list.pop();
+}
+
+function unwrapListeners(arr) {
+  var ret = new Array(arr.length);
+  for (var i = 0; i < ret.length; ++i) {
+    ret[i] = arr[i].listener || arr[i];
+  }
+  return ret;
+}
+
+function once(emitter, name) {
+  return new Promise(function (resolve, reject) {
+    function errorListener(err) {
+      emitter.removeListener(name, resolver);
+      reject(err);
+    }
+
+    function resolver() {
+      if (typeof emitter.removeListener === 'function') {
+        emitter.removeListener('error', errorListener);
+      }
+      resolve([].slice.call(arguments));
+    };
+
+    eventTargetAgnosticAddListener(emitter, name, resolver, { once: true });
+    if (name !== 'error') {
+      addErrorHandlerIfEventEmitter(emitter, errorListener, { once: true });
+    }
+  });
+}
+
+function addErrorHandlerIfEventEmitter(emitter, handler, flags) {
+  if (typeof emitter.on === 'function') {
+    eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
+  }
+}
+
+function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
+  if (typeof emitter.on === 'function') {
+    if (flags.once) {
+      emitter.once(name, listener);
+    } else {
+      emitter.on(name, listener);
+    }
+  } else if (typeof emitter.addEventListener === 'function') {
+    // EventTarget does not have `error` event semantics like Node
+    // EventEmitters, we do not listen for `error` events here.
+    emitter.addEventListener(name, function wrapListener(arg) {
+      // IE does not have builtin `{ once: true }` support so we
+      // have to do it manually.
+      if (flags.once) {
+        emitter.removeEventListener(name, wrapListener);
+      }
+      listener(arg);
+    });
+  } else {
+    throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
+  }
+}
+
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
