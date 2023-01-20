@@ -1,5 +1,8 @@
 ﻿import React, { useState } from 'react';
 
+import Controls from './Controls';
+import List from './List'
+
 import "./Filter.css";
 
 export default props => {
@@ -8,9 +11,8 @@ export default props => {
 
   return (
     <div>
-      Возраст: {age}<br/>
-      <button onClick={ () => setAge(16) }>установить 16</button>
-      <button onClick={ () => setAge(prevAge => prevAge+1) }>увеличить н 1</button>
+        <Controls/>
+        <List/>
     </div>
   );
 };
