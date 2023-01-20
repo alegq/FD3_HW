@@ -9,7 +9,6 @@ import './MobileCompany.css';
 class MobileCompany extends React.PureComponent {
 
     static propTypes = {
-    name: PropTypes.string.isRequired,
     clients:PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
@@ -21,61 +20,38 @@ class MobileCompany extends React.PureComponent {
     };
 
     state = {
-        name: this.props.name,
         clients: this.props.clients,
     };
 
+    clientsConst = this.props.clients;
+
     componentDidMount = () => {
-        mobileEvents.addListener('EDeliteClicked',this.deliteClient);
-       // voteEvents.addListener('EFreeAnswerTextChanged',this.freeAnswerTextChanged);
+        mobileEvents.addListener('EDeliteClicked',this.deliteClient); // EventEmitter,   прослушиваем событие нажатие кнопки "Delete"
     };
 
     componentWillUnmount = () => {
-        mobileEvents.removeListener('EDeliteClicked',this.deliteClient);
-       // voteEvents.removeListener('EFreeAnswerTextChanged',this.freeAnswerTextChanged);
+        mobileEvents.removeListener('EDeliteClicked',this.deliteClient); // удалить прослушивание при удалении компанента
     };
 
+    // удалить клиента
     deliteClient = (id) => {
-        console.log('cсобытие '+id);
-        this.setState( {clients:this.state.clients.filter(v => v.id!==id)} );
+        this.setState( {clients:this.state.clients.filter(v => v.id!==id)} ); // filter создает новый массив, тем самым вносит иммутабильные изменения
+        this.clientsConst = this.state.clients.filter(v => v.id!==id);
     };
-
-    setName1 = () => {
-    this.setState({name:'МТС'});
-    };
-
-  setName2 = () => {
-    this.setState({name:'Velcom'});
-  };
-  
-  setBalance = (clientId,newBalance) => {
-    let newClients=this.state.clients;
-    newClients.forEach( c => {
-      if ( c.id==clientId )
-        c.balance=newBalance;
-    } );
-    this.setState({clients:newClients});
-  };
-
-  setBalance1 = () => {
-    this.setBalance(105,230);
-  };
-
-  setBalance2 = () => {
-    this.setBalance(105,250);
-  };
-
+    //добавить клиента
     addClient = () => {
         let newClient={id:this.state.clients.length+100, lastName: "Иванов", firstName:"Иван", middleName:"Иванович", balance:0};
         this.setState({clients:[...this.state.clients,newClient]});
+        this.clientsConst = [...this.state.clients,newClient];
     };
 
+    //выести всех клиентов
     filterClient = () => {
-        this.setState({clients:this.props.clients});
+        this.setState({clients:this.clientsConst});
     };
 
     prActiveFilter= (client) =>{
-        this.setState({clients:this.state.clients.filter(this.activeFilter)});
+        this.setState({clients:this.clientsConst.filter(this.activeFilter)});
     }
 
     activeFilter= (client) =>{
@@ -83,7 +59,7 @@ class MobileCompany extends React.PureComponent {
     }
 
     prblockedFilter= (client) =>{
-        this.setState({clients:this.state.clients.filter(this.blockedFilter)});
+        this.setState({clients:this.clientsConst.filter(this.blockedFilter)});
     }
 
     blockedFilter= (client) =>{
@@ -104,7 +80,7 @@ class MobileCompany extends React.PureComponent {
           <input type="button" value="Все" onClick={this.filterClient} />
           <input type="button" value="Активные" onClick={this.prActiveFilter} />
           <input type="button" value="Заблокированные" onClick={this.prblockedFilter} />
-          <div className='MobileCompanyName'>Компания &laquo;{this.state.name}&raquo;</div>
+
           <table className={'tables'}>
             <tbody className='MobileCompanyClients'>
               {clientsCode}
@@ -112,7 +88,6 @@ class MobileCompany extends React.PureComponent {
           </table>
 
           <input type="button" value="Добавить клиента" onClick={this.addClient} />
-        {/*<input type="button" value="Сидоров=250" onClick={this.setBalance2} />*/}
       </div>
     )
     ;

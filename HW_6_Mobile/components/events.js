@@ -1,9 +1,7 @@
 import {EventEmitter} from 'events';
 
 let mobileEvents=new EventEmitter();
-// в потоке voteEvents будут все события, связанные с мобильным приложением
-// событие "EAnswerClicked" - кликнут вариант ответа, его сэмиттирует VotesAnswer и примет VotesBlock
-// событие "EFreeAnswerTextChanged" - изменён текст свободного ответа, его сэмиттирует VotesAnswer и примет VotesBlock
+// в потоке mobileEvents будут все события, связанные с мобильным приложением
+// событие "EDeliteClicked" - кликнут "Delete" клиента, его сэмиттирует MobileClient и примет MobileCompany
 // лучше работать не с текстовыми литералами, а объявить переменные с соответствующими значениями
-
 export {mobileEvents};

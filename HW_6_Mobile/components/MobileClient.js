@@ -29,22 +29,14 @@ class MobileClient extends React.PureComponent {
 
 
   deliteClicked = (EO) => {
-    //this.props.cbSelected(this.props.code);
-    mobileEvents.emit('EDeliteClicked',this.state.info.id);
+    mobileEvents.emit('EDeliteClicked',this.state.info.id); // при нажатии кнопки "Delete" создаем новое событие
   };
-
+  // переключаемся в режи редоктирования
   editClient = () => {
     this.setState({modeEdit:1})
   };
-
-  // deliteClient = () => {
-  //   if ( this.newTextRef.current ) {
-  //     let newText=this.newTextRef.current.value;
-  //     this.setState({question:newText});
-  //   }
-  // };
+  // при внесении изменений в любое поле в режиме редактирования, изменения вносятся в state
   changeInfo = () => {
-    console.log(this.newLastNameRef.current.value)
     let info = this.state.info;
     let ltName = this.newLastNameRef.current.value
     let fsName = this.newFirstNameRef.current.value
@@ -57,15 +49,9 @@ class MobileClient extends React.PureComponent {
     this.setState({info:info})
   };
 
+  // сохраняются изменения и выходим из режима редактирования
   saveEdit = () => {
     this.setState({modeEdit:0})
-  };
-
-
-  componentDidUpdate = (oldProps, oldState) => {
-    console.log("MobileClient id="+this.props.info.id+" componentDidUpdate");
-    if ( this.props.balance!==this.state.balance )
-      this.setState({balance:this.props.balance});
   };
 
   render() {
@@ -73,9 +59,7 @@ class MobileClient extends React.PureComponent {
     console.log("MobileClient id="+this.state.info.id+" render");
     
     return (
-    <tr className={'MobileClient'} onClick={this.productClicked}
-       // style={{backgroundColor:(this.props.selectedProductCode===this.props.code)?'red':'white'}}
-    >
+    <tr className={'MobileClient'} onClick={this.productClicked}>
 
       <td className={'tdProduct'}>
         {
