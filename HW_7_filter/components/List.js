@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 
 import "./Filter.css";
 
-export default props => {
-
-    const [age, setAge] = useState(26);
+export default ({wordsList}) => {
 
     return (
-        <div>
-
+        <div className={'contWords'}>
+            {wordsList.map((v,i)=><span key={i} className={'word'}>{v}<br/></span>)}
         </div>
     );
 };

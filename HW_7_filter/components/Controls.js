@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import "./Filter.css";
 
-export default props => {
-
-    const [age, setAge] = useState(25);
+export default ({sort,cbSetSort,filter,cbSetFilter}) => {
 
     return (
         <div>
-            <input type="checkbox"/>
-            <input type="text"/>
-            <button onClick={ () => setAge(prevAge => prevAge+1) }>сброс</button>
+            <input type="checkbox" checked={sort} onClick={event => cbSetSort(event.target.checked)}/>
+            <input type="text" value={filter} onChange={event => cbSetFilter(event.target.value)}/>
+            <button onClick={()=>{cbSetSort(false);cbSetFilter("")}}>сброс</button>
         </div>
     );
 };

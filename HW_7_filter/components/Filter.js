@@ -5,14 +5,25 @@ import List from './List'
 
 import "./Filter.css";
 
-export default props => {
+export default ({fullWordsList}) => {
 
-  const [age, setAge] = useState(25);
+    const [sort,setSort] = useState(false);
+    const [filter,setFilter] = useState("");
 
-  return (
+    let wordsList = fullWordsList.slice();
+    if (filter)
+        wordsList = wordsList.filter(word => word.includes(filter));
+    if (sort){
+        wordsList.sort();
+    }
+
+    return (
     <div>
-        <Controls/>
-        <List/>
+        <Controls
+            sort={sort} cbSetSort={setSort}
+            filter={filter} cbSetFilter={setFilter}
+        />
+        <List wordsList={wordsList}/>
     </div>
-  );
+    );
 };
